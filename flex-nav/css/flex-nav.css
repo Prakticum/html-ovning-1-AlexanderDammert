@@ -1,0 +1,49 @@
+:root {
+    /* färg variablar, namnet beskriver värdet ller bruket */
+    --dark: #222222;
+    --light: #FEFEFE;
+    --link-bg: #CCCCCC;
+    --link-color: var(--dark); /* man kan ha variabel inom variabel */
+    --link-hover-bg: #999999;
+    --link-hover-color: var(--dark);
+    --link-active-bg: #666666;  
+    --link-active-color: var(--light);  
+  }
+  
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 100%;
+      color: var(--dark);
+      background-color: var(--light);
+  }
+
+  .nav {
+      width: 100%;
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  ul.nav-links {
+      list-style: none;
+      display: flex;
+  }
+
+  li.nav-item a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 15px;
+      background-color: var(--dark);
+      color: var(--light);
+  }
+
+  li.nav-item a:hover {
+      color: var(--link-active-color);
+      background-color: var(--link-hover-bg);
+  }
+
+  li.nav-item.active a {
+      background-color: var(--link-active-bg);
+      color: var(--link-active-color);
+  }
